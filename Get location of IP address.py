@@ -6,11 +6,11 @@ import re
 
 
 def getPublicIP():
-    data = str(urllib.request.urlopen('52.6.132.144').read())
+    data = str(urllib.request.urlopen('Enter IP address').read())
     return re.compile(r'Address: (\d+.\d+.\d+.\d+)').search(data).group(1)
 
 
-IP = ("52.6.132.144")
+IP = ("Enter IP address")
 
 # Get Location
 url = 'http://ipinfo.io/' + IP + '/json'
